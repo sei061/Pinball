@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8">
+    <title>Ammo shapes - OO</title>
+</head>
+<style>
+    body {
+        overflow: hidden;
+        margin: 0;
+    }
+    .ui {
+        position: absolute;
+    }
+    button{
+        margin: 20px;
+        width: 150px;
+    }
+</style>
+<body>
+<script src="../lib/ammo/ammo.js"></script>
+<div style="top:10px;width:100%;text-align: center; color:rebeccapurple;" class="ui">
+    Ammo, kuler, hinge constraint, styrbar kube<br>
+    Flytt på kulen med WASD<br>
+    H for nye kuler.<br>
+    Roter venstre hengsel med VB, høyre med NM<br>
+</div>
+<script type="module">
+    import {AmmoShapesApp} from "./js/AmmoShapesApp.js";
+
+    // Ammojs initialisering:
+    Ammo().then( function( AmmoLib ) {
+        Ammo = AmmoLib;
+        let ammoShapesApp = new AmmoShapesApp();
+        ammoShapesApp.start();
+    } );
+</script>
+</body>
+</html>
